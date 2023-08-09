@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang=pt_BR>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste Box³</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <h1>CRUD de Contatos</h1>
+
+        <!-- CADASTRO DE NOVOS CONTATOS -->
+        <form id="formContato">
+            <div class="formulario">
+                <label for="nome">Nome</label>
+                <input type="text" class="estilo-formulario" id="nome" placeholder="Nome Completo">
+            </div>
+            <div class="formulario">
+                <label for="telefone">Telefone</label>
+                <input type="text" class="estilo-formulario" id="telefone" placeholder="(85) 99194-7007">
+            </div>
+            <div class="formulario">
+                <label for="email">E-mail</label>
+                <input type="email" class="estilo-formulario" id="email" placeholder="email@provedor.com">
+            </div>
+            <div class="formulario">
+                <label for="status">Status</label>
+                <input type="checkbox" class="estilo-formulario" id="status">
+            </div>
+            <div class="formulario">
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input type="date" class="estilo-formulario" id="dataNascimento" placeholder="Data de Nascimento">
+            </div>
+            <button type="button" onclick="cadastrarContato()">Cadastrar</button>
+        </form>
+        <button type="button" onclick="atualizarContatos()">Listar</button>
+
+        <!-- LISTAGEM DE CONTATOS -->
+        <table class="table">
+            <thead class="cabecalho">
+                <tr>
+                    <th>NOME</th>
+                    <th>TELEFONE</th>
+                    <th>E-MAIL</th>
+                    <th>STATUS</th>
+                    <th>DATA DE NASCIMENTO</th>
+                    <th>AÇÕES</th>
+                </tr>
+            </thead>
+            <tbody id="tableContent">
+            </tbody>
+        </table>
+    </div>
+    <script src="./function.js"></script>
+</body>
+
+</html>
